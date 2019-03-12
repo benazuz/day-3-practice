@@ -45,30 +45,111 @@ let myStuff=["PC", "Bed", "Shoes"];
 // console.log(myArray);
 // console.log(myArray.length);
 
-const genes=["ACADM", "GLMN", "RLF", "AZIN2", "CRYZ"];
-// const newGenes= genes;
-// console.log(genes);
-// console.log(newGenes);
-// console.log(newGenes.length);
-// // let removedGene=newGenes.splice(2, 1);
+// const genes=["ACADM", "GLMN", "RLF", "AZIN2", "CRYZ"];
+// // const newGenes= genes;
+// // console.log(genes);
+// // console.log(newGenes);
 // // console.log(newGenes.length);
-// newGenes.push(newGenes[newGenes.length-1])
+// // // let removedGene=newGenes.splice(2, 1);
+// // // console.log(newGenes.length);
+// // newGenes.push(newGenes[newGenes.length-1])
+// // console.log(newGenes);
+// //starting over with an empty array
+// const newGenes=[];
+// // newGenes.push(genes[0], genes[1], genes[genes.length-1], genes[2], genes[3], genes[3]);
+// const firstTwo=genes.splice(0, 2);
+// const lastGene=genes.splice(genes.length-1);
 // console.log(newGenes);
-//starting over with an empty array
-const newGenes=[];
-// newGenes.push(genes[0], genes[1], genes[genes.length-1], genes[2], genes[3], genes[3]);
-const firstTwo=genes.splice(0, 2);
-const lastGene=genes.splice(genes.length-1);
-console.log(newGenes);
-newGenes.push(...firstTwo, ...lastGene);
-console.log(newGenes);
-newGenes.push(genes[0]);
-console.log(newGenes);
-console.log(genes);
-newGenes.push(genes[1], genes[1]);
-console.log(newGenes);
-newGenes.unshift("FXT");
-console.log(newGenes);
+// newGenes.push(...firstTwo, ...lastGene);
+// console.log(newGenes);
+// newGenes.push(genes[0]);
+// console.log(newGenes);
+// console.log(genes);
+// newGenes.push(genes[1], genes[1]);
+// console.log(newGenes);
+// newGenes.unshift("FXT");
+// console.log(newGenes);
+
+//NOW OBJECTS
+
+let car = {
+    color: "black",
+    numWheels: 4,
+    isFancy: false
+}
+if(car.isFancy){
+    console.log("The car is " + car.color + ", has " + car.numWheels + " and it is really fancy!");
+}else{
+    console.log("The car is " + car.color + ", has " + car.numWheels + " wheels" + " and it is not very fancy.");
+}
+
+let fridge = {
+    item: "bread",
+    toBeginning: false,
+    items: ["eggs", "veggies", "fruits"]
+}
+if(fridge.toBeginning){
+    fridge.items.unshift(fridge.item);
+}else{
+    fridge.items.push(fridge.item);
+}
+console.log(fridge["items"]);
+
+const human = {
+    age: 0
+}
+const babyNameKey = "name"
+const babyNameValue = "Goojibear"
+human[babyNameKey] = babyNameValue;
+// human.babyNameKey = babyNameValue; // the object think that the key name is babyNameKey
+console.log(human);
+human["babyNameKey"] = "Ben";
+console.log(human);
+
+const bag = {
+    weight: 10,
+    owner: "Larissa",
+    items: [                   // an array with objects in it!
+      {item: "Pen", count: 2},
+      {item: "Bottle", count: 1},
+      {item: "Book", count: 3}
+    ]
+  }
+  console.log(bag.items[0].item);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
