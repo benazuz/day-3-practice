@@ -72,54 +72,120 @@ let myStuff=["PC", "Bed", "Shoes"];
 
 //NOW OBJECTS
 
-let car = {
-    color: "black",
-    numWheels: 4,
-    isFancy: false
+// let car = {
+//     color: "black",
+//     numWheels: 4,
+//     isFancy: false
+// }
+// if(car.isFancy){
+//     console.log("The car is " + car.color + ", has " + car.numWheels + " and it is really fancy!");
+// }else{
+//     console.log("The car is " + car.color + ", has " + car.numWheels + " wheels" + " and it is not very fancy.");
+// }
+
+// let fridge = {
+//     item: "bread",
+//     toBeginning: false,
+//     items: ["eggs", "veggies", "fruits"]
+// }
+// if(fridge.toBeginning){
+//     fridge.items.unshift(fridge.item);
+// }else{
+//     fridge.items.push(fridge.item);
+// }
+// console.log(fridge["items"]);
+
+// const human = {
+//     age: 0
+// }
+// const babyNameKey = "name"
+// const babyNameValue = "Goojibear"
+// human[babyNameKey] = babyNameValue;
+// // human.babyNameKey = babyNameValue; // the object think that the key name is babyNameKey
+// console.log(human);
+// human["babyNameKey"] = "Ben";
+// console.log(human);
+
+// const bag = {
+//     weight: 10,
+//     owner: "Larissa",
+//     items: [                   // an array with objects in it!
+//       {item: "Pen", count: 2},
+//       {item: "Bottle", count: 1},
+//       {item: "Book", count: 3}
+//     ]
+//   }
+//   console.log(bag.items[0].item);
+
+//EXERCISE
+
+let p1 = {
+    name: "Ben",
+    age: 25,
+    city: "Rishon"
 }
-if(car.isFancy){
-    console.log("The car is " + car.color + ", has " + car.numWheels + " and it is really fancy!");
+let p2 = {
+    name: "shay",
+    age: 25,
+    city: "Telaviv"
+}
+console.log(p1, p2);
+if(p1.age == p2.age){
+    if(p1.city == p2.city){
+        console.log("Ben wanted to date Shay");
+    }else{
+        console.log("Ben wanted to date Shay but couldnt");
+    }
 }else{
-    console.log("The car is " + car.color + ", has " + car.numWheels + " wheels" + " and it is not very fancy.");
+    console.log("Ben wont date Shay cuz they are not at the same age");
 }
-
-let fridge = {
-    item: "bread",
-    toBeginning: false,
-    items: ["eggs", "veggies", "fruits"]
-}
-if(fridge.toBeginning){
-    fridge.items.unshift(fridge.item);
-}else{
-    fridge.items.push(fridge.item);
-}
-console.log(fridge["items"]);
-
-const human = {
-    age: 0
-}
-const babyNameKey = "name"
-const babyNameValue = "Goojibear"
-human[babyNameKey] = babyNameValue;
-// human.babyNameKey = babyNameValue; // the object think that the key name is babyNameKey
-console.log(human);
-human["babyNameKey"] = "Ben";
-console.log(human);
-
-const bag = {
-    weight: 10,
-    owner: "Larissa",
-    items: [                   // an array with objects in it!
-      {item: "Pen", count: 2},
-      {item: "Bottle", count: 1},
-      {item: "Book", count: 3}
+let myList = [
+    {name: "Ben", age: 25},
+    {name: "Shay", age: 24}
+]
+myList[0].name = "NewName";
+console.log(myList[0].name);
+myList.splice(1);
+console.log(myList[0]);
+console.log(myList[1]);
+let myList2 = [
+    {name: "Don", age: 23},
+    {name: "Idan", age: 22}
+]
+myList.push(...myList2);
+console.log(myList);
+let library = {
+    books: [
+        {title: "GOT", author: "Jeorge R.R Martin"},
+        {title: "HarryPotter", author: "J.K.Rowling"},
+        {title: "LOTR", author: "John R.R Tolkien"}
     ]
+}
+console.log(library);
+myList.push(...library.books);
+console.log(myList);
+
+const reservations = {
+    Bob: { claimed: false },
+    Ted: { claimed: true }
   }
-  console.log(bag.items[0].item);
-
-
-
-
+  
+  const name = prompt('Please enter the name for your reservation');
+  if(name == "Bob"){
+    if(reservations.Bob.claimed){
+        console.log("claimed");
+    }else{
+        console.log("unclaimed");
+    }
+  }else if(name =="Ted"){
+      if(reservations.Ted.claimed){
+          console.log("claimed");
+      }else{
+          console.log(unclaimed);
+      }
+  }else{
+      console.log("no reservations for this name");
+  }
 
 
 
