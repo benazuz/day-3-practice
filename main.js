@@ -6,7 +6,7 @@
 // let infoMicrosoft=["Microsoft", 2019, true, "Computers"];
 // console.log(infoMicrosoft);
 // console.log(companies[5-1]);
-let myStuff=["PC", "Bed", "Shoes"];
+// let myStuff=["PC", "Bed", "Shoes"];
 // console.log(myStuff[3-2]);
 // let firstCompany=companies[0];
 // console.log(firstCompany);
@@ -119,81 +119,135 @@ let myStuff=["PC", "Bed", "Shoes"];
 
 //EXERCISE
 
-let p1 = {
-    name: "Ben",
-    age: 25,
-    city: "Rishon"
-}
-let p2 = {
-    name: "shay",
-    age: 25,
-    city: "Telaviv"
-}
-console.log(p1, p2);
-if(p1.age == p2.age){
-    if(p1.city == p2.city){
-        console.log("Ben wanted to date Shay");
-    }else{
-        console.log("Ben wanted to date Shay but couldnt");
-    }
-}else{
-    console.log("Ben wont date Shay cuz they are not at the same age");
-}
-let myList = [
-    {name: "Ben", age: 25},
-    {name: "Shay", age: 24}
-]
-myList[0].name = "NewName";
-console.log(myList[0].name);
-myList.splice(1);
-console.log(myList[0]);
-console.log(myList[1]);
-let myList2 = [
-    {name: "Don", age: 23},
-    {name: "Idan", age: 22}
-]
-myList.push(...myList2);
-console.log(myList);
-let library = {
-    books: [
-        {title: "GOT", author: "Jeorge R.R Martin"},
-        {title: "HarryPotter", author: "J.K.Rowling"},
-        {title: "LOTR", author: "John R.R Tolkien"}
-    ]
-}
-console.log(library);
-myList.push(...library.books);
-console.log(myList);
+// let p1 = {
+//     name: "Ben",
+//     age: 25,
+//     city: "Rishon"
+// }
+// let p2 = {
+//     name: "shay",
+//     age: 25,
+//     city: "Telaviv"
+// }
+// console.log(p1, p2);
+// if(p1.age == p2.age){
+//     if(p1.city == p2.city){
+//         console.log("Ben wanted to date Shay");
+//     }else{
+//         console.log("Ben wanted to date Shay but couldnt");
+//     }
+// }else{
+//     console.log("Ben wont date Shay cuz they are not at the same age");
+// }
+// let myList = [
+//     {name: "Ben", age: 25},
+//     {name: "Shay", age: 24}
+// ]
+// myList[0].name = "NewName";
+// console.log(myList[0].name);
+// myList.splice(1);
+// console.log(myList[0]);
+// console.log(myList[1]);
+// let myList2 = [
+//     {name: "Don", age: 23},
+//     {name: "Idan", age: 22}
+// ]
+// myList.push(...myList2);
+// console.log(myList);
+// let library = {
+//     books: [
+//         {title: "GOT", author: "Jeorge R.R Martin"},
+//         {title: "HarryPotter", author: "J.K.Rowling"},
+//         {title: "LOTR", author: "John R.R Tolkien"}
+//     ]
+// }
+// console.log(library);
+// myList.push(...library.books);
+// console.log(myList);
 
-const reservations = {
-    Bob: { claimed: false },
-    Ted: { claimed: true }
-  }
+
+//RESERVATIONS
+
+// let myDiv = document.getElementById("div1")
+// let inputBox = document.createElement("input")
+// inputBox.setAttribute("class", "inputClass")
+// inputBox.value = "Your name"
+// myDiv.appendChild(inputBox)
+
+// const checkButton = document.createElement("button")
+// checkButton.setAttribute("class", "buttonClass")
+// checkButton.style.height = "20px"
+// checkButton.style.width = "53px"
+// checkButton.innerHTML = "check"
+// myDiv.appendChild(checkButton)
+
+
+// const reservations = {
+//     Bob: { claimed: false },
+//     Ted: { claimed: true }
+//   }
   
-  const name = prompt('Please enter the name for your reservation');
-  if(name == "Bob"){
-    if(reservations.Bob.claimed){
-        console.log("claimed");
-    }else{
-        console.log("unclaimed");
+//   const checkReservations = function(){
+//     //   console.log("hi")
+//     let name = inputBox.value
+//     if(name == "Bob"){
+//       if(reservations.Bob.claimed){
+//           console.log("claimed");
+//       }else{
+//           console.log("unclaimed");
+//       }
+//     }else if(name =="Ted"){
+//         if(reservations.Ted.claimed){
+//             console.log("claimed");
+//         }else{
+//             console.log(unclaimed);
+//         }
+//     }else{
+//         console.log("no reservations for this name");
+//     }
+//   }
+
+//   checkButton.onclick = checkReservations
+// //   checkButton.addEventListener("click", checkReservations)
+
+// const cleanInput = function(){
+//     inputBox.value = " "
+// }
+
+// inputBox.onclick = cleanInput
+
+// VISUAL OVERLOAD HOVER COLORS
+
+let boxesContainer = document.createElement("div")
+boxesContainer.setAttribute("id", "container")
+document.body.appendChild(boxesContainer)
+
+const getRandomColor = function(){
+    let letters = "0123456789ABCDEF"
+    let color = "#"
+    for(i=0; i<6; i++){
+        color += letters[Math.floor(Math.random() * 16)]
     }
-  }else if(name =="Ted"){
-      if(reservations.Ted.claimed){
-          console.log("claimed");
-      }else{
-          console.log(unclaimed);
-      }
-  }else{
-      console.log("no reservations for this name");
-  }
+    return color
+}
 
+// const setRandomColor = function(box){
+//     let color = getRandomColor()
+//     box.style.backgroundColor = color
 
-
-
-
-
-
-
+// }
+// document.getElementById("container").innerHTML = "Hello World"
+// console.log(boxesContainer)
+for(i=0; i<6; i++){
+    let box = document.createElement("div")
+    box.setAttribute("id", "box"+i)
+    box.style.height = "50px"
+    box.style.width = "50px"
+    let color = getRandomColor()
+    box.style.backgroundColor = color
+    box.style.display = ("inline-block")
+    boxesContainer.appendChild(box)
+}
 
 
 
